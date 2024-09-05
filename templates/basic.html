@@ -63,9 +63,6 @@
       {%- if config.extra.social.dribbble -%}
       <li><a href="https://dribbble.com/{{ config.extra.social.dribbble }}" aria-label="Go to Dribbble profile page"><i class="fab fa-dribbble"></i></a></li>
       {%- endif -%}
-      {%- if config.extra.social.weibo -%}
-      <li><a href="https://weibo.com/{{ config.extra.social.weibo }}" aria-label="Go to weibo profile page"><i class="fab fa-weibo"></i></a></li>
-      {%- endif -%}
       {%- if config.extra.social.linkedin -%}
       <li><a href="https://linkedin.com/in/{{ config.extra.social.linkedin }}" aria-label="Go to Linkedin profile page"><i class="fab fa-linkedin"></i></a></li>
       {%- endif -%}
@@ -74,12 +71,15 @@
       </li>
       {%- endif -%}
       {% block more_social_link %}
+      {%- if config.extra.social.pirate -%}
+      <li><a href="https://linkedin.com/in/{{ config.extra.social.linkedin }}" aria-label="Go to Linkedin profile page"><i class="fab fa-linkedin"></i></a></li>
+      {%- endif -%}
       {% endblock more_social_link %}
     </ul>
     <div class="footer">
       {% block footer %}
-      <span>Designed by </span><a href="https://www.caicai.me">CaiCai</a>
-      <div class="by_zola"><a href="https://www.getzola.org/" target="_blank">Proudly published with Zola!</a></div>
+      <span>My </span><a href="https://www.thingiverse.com/mushogenshin/designs">Tributes to Great Thinkers</a>
+      <div class="by_zola"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7231484580854206464" target="_blank">See my first video game!</a></div>
       {% endblock footer %}
     </div>
   </div>
@@ -94,6 +94,12 @@
         <li><a {% if language_site_path=="/" or language_site_path is starting_with("/page/") %}class="current" {% endif
             %} href="{{ get_url(path="@/_index.md", lang=lang) }}">{{ trans(key="home", lang=lang) }}</a></li>
         <li><a {% if language_site_path is starting_with("/about") %}class="current" {% endif %} href="{{ get_url(path="@/about/_index.md", lang=lang) }}">{{ trans(key="about", lang=lang) }}</a></li>
+        {%- if config.extra.show.ue_cpp -%}
+        <li><a {% if language_site_path is starting_with("/ue_cpp") %}class="current" {% endif %} href="{{ get_url(path="@/ue_cpp/_index.md", lang=lang) }}">{{ trans(key="ue_cpp", lang=lang) }}</a></li>
+        {%- endif -%}
+        {%- if config.extra.show.rigging -%}
+        <li><a {% if language_site_path is starting_with("/rigging") %}class="current" {% endif %} href="{{ get_url(path="@/rigging/_index.md", lang=lang) }}">{{ trans(key="rigging", lang=lang) }}</a></li>
+        {%- endif -%}
         {%- if config.extra.show.tags -%}
         <li><a {% if language_site_path is starting_with("/tags") %}class="current" {% endif %} href="{{ get_url(path="@/_index.md", lang=lang) }}tags">{{ trans(key="tags", lang=lang) }}</a></li>
         {%- endif -%}
