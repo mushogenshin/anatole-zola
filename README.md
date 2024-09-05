@@ -152,8 +152,10 @@ We support a bunch of social links:
 ```toml
 [extra.social]
 github = ""
+gitlab = ""
 stackoverflow = "" # use user_id
 twitter = ""
+mastodon = "" # use hostname/@username
 facebook = ""
 instagram = ""
 dribbble = ""
