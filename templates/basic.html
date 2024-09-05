@@ -60,7 +60,7 @@
       <li><a rel="me" href="https://{{ config.extra.social.mastodon }}"
                       aria-label="Go to Mastodon profile page"><i class="fab fa-mastodon"></i></a>
       </li>
-      {%- endif -%}    
+      {%- endif -%}
       {% if config.extra.social.facebook -%}
       <li><a href="https://www.facebook.com/{{ config.extra.social.facebook }}" aria-label="Go to FaceBook profile page"><i class="fab fa-facebook"></i></a></li>
       {%- endif -%}
@@ -68,20 +68,10 @@
       <li><a href="https://www.instagram.com/{{ config.extra.social.instagram }}" aria-label="Go to Instagram profile page"><i class="fab fa-instagram"></i></a>
       </li>
       {%- endif -%}
-      {%- if config.extra.social.dribbble -%}
-      <li><a href="https://dribbble.com/{{ config.extra.social.dribbble }}" aria-label="Go to Dribbble profile page"><i class="fab fa-dribbble"></i></a></li>
-      {%- endif -%}
       {%- if config.extra.social.linkedin -%}
       <li><a href="https://linkedin.com/in/{{ config.extra.social.linkedin }}" aria-label="Go to Linkedin profile page"><i class="fab fa-linkedin"></i></a></li>
       {%- endif -%}
-      {%- if config.extra.social.flickr -%}
-      <li><a href="https://www.flickr.com/photos/{{ config.extra.social.flickr }}" aria-label="Go to Flickr profile page"><i class="fab fa-flickr"></i></a>
-      </li>
-      {%- endif -%}
       {% block more_social_link %}
-      {%- if config.extra.social.pirate -%}
-      <li><a href="https://linkedin.com/in/{{ config.extra.social.linkedin }}" aria-label="Go to Linkedin profile page"><i class="fab fa-linkedin"></i></a></li>
-      {%- endif -%}
       {% endblock more_social_link %}
     </ul>
     <div class="footer">
