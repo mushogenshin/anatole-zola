@@ -40,11 +40,14 @@
       </div>
     </div>
     <ul class="social-links">
+      {%- if config.extra.social.artstation -%}
+      <li><a href="http://artstation.com/{{ config.extra.social.artstation }}" aria-label="Go to ArtStation profile page"><i class="fab fa-artstation"></i></a></li>
+      {%- endif -%}
+      {%- if config.extra.social.steam -%}
+      <li><a href="http://steamcommunity.com/id/{{ config.extra.social.itch }}" aria-label="Go to Steam profile page"><i class="fab fa-steam"></i></a></li>
+      {%- endif -%}
       {%- if config.extra.social.github -%}
       <li><a href="https://github.com/{{ config.extra.social.github }}" aria-label="Go to Github profile page"><i class="fab fa-github"></i></a></li>
-      {%- endif -%}
-      {%- if config.extra.social.gitlab -%}
-      <li><a href="https://gitlab.com/{{ config.extra.social.gitlab }}" aria-label="Go to Gitlab profile page"><i class="fab fa-gitlab"></i></a></li>
       {%- endif -%}
       {%- if config.extra.social.stackoverflow -%}
       <li>
@@ -59,6 +62,14 @@
       {%- if config.extra.social.twitter -%}
       <li><a href="https://twitter.com/{{ config.extra.social.twitter }}" aria-label="Go to Twitter profile page"><i class="fab fa-twitter"></i></a></li>
       {%- endif -%}
+      {% block more_social_link %}
+      <br/>
+      {%- if config.extra.social.itch -%}
+      <li><a href="https://{{ config.extra.social.itch }}.itch.io" aria-label="Go to Itch.io profile page"><i class="fab fa-itch-io"></i></a></li>
+      {%- endif -%}
+      {%- if config.extra.social.patreon -%}
+      <li><a href="https://patreon.com/{{ config.extra.social.patreon }}" aria-label="Go to Patreon profile page"><i class="fa-brands fa-patreon"></i></a></li>
+      {%- endif -%}
       {%- if config.extra.social.mastodon -%}
       <li><a rel="me" href="https://{{ config.extra.social.mastodon }}"
                       aria-label="Go to Mastodon profile page"><i class="fab fa-mastodon"></i></a>
@@ -70,17 +81,6 @@
       {%- if config.extra.social.instagram -%}
       <li><a href="https://www.instagram.com/{{ config.extra.social.instagram }}" aria-label="Go to Instagram profile page"><i class="fab fa-instagram"></i></a>
       </li>
-      {%- endif -%}
-      {% block more_social_link %}
-      <br/>
-      {%- if config.extra.social.itch -%}
-      <li><a href="http://steamcommunity.com/id/{{ config.extra.social.itch }}" aria-label="Go to Steam profile page"><i class="fab fa-steam"></i></a></li>
-      {%- endif -%}
-      {%- if config.extra.social.itch -%}
-      <li><a href="https://{{ config.extra.social.itch }}.itch.io" aria-label="Go to Itch.io profile page"><i class="fab fa-itch-io"></i></a></li>
-      {%- endif -%}
-      {%- if config.extra.social.patreon -%}
-      <li><a href="https://patreon.com/{{ config.extra.social.patreon }}" aria-label="Go to Patreon profile page"><i class="fa-brands fa-patreon"></i></a></li>
       {%- endif -%}
       {% endblock more_social_link %}
     </ul>
