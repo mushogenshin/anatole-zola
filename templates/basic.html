@@ -62,6 +62,11 @@
       {%- if config.extra.social.twitter -%}
       <li><a href="https://twitter.com/{{ config.extra.social.twitter }}" aria-label="Go to Twitter profile page"><i class="fab fa-twitter"></i></a></li>
       {%- endif -%}
+      {%- if config.extra.social.kofi -%}
+      <li><a href="https://ko-fi.com/{{ config.extra.social.kofi }}" aria-label="Go to Ko-fi profile page">
+        <img src={{ get_url(path="images/logo_Ko-fi.webp" ) }} style="width:18px;filter: grayscale(100%);" alt="Ko-fi logo" />
+      </a></li>
+      {%- endif -%}
       {% block more_social_link %}
       <br/>
       {%- if config.extra.social.epic_dev -%}
