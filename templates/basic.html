@@ -44,7 +44,7 @@
       <li><a href="http://artstation.com/{{ config.extra.social.artstation }}" aria-label="Go to ArtStation profile page"><i class="fab fa-artstation"></i></a></li>
       {%- endif -%}
       {%- if config.extra.social.steam -%}
-      <li><a href="http://steamcommunity.com/id/{{ config.extra.social.itch }}" aria-label="Go to Steam profile page"><i class="fab fa-steam"></i></a></li>
+      <li><a href="http://steamcommunity.com/id/{{ config.extra.social.steam }}" aria-label="Go to Steam profile page"><i class="fab fa-steam"></i></a></li>
       {%- endif -%}
       {%- if config.extra.social.github -%}
       <li><a href="https://github.com/{{ config.extra.social.github }}" aria-label="Go to Github profile page"><i class="fab fa-github"></i></a></li>
@@ -64,8 +64,18 @@
       {%- endif -%}
       {% block more_social_link %}
       <br/>
+      {%- if config.extra.social.epic_dev -%}
+      <li><a href="https://dev.epicgames.com/community/profile/{{ config.extra.social.epic_dev }}" aria-label="Go to Epic Dev Community profile page">
+        <img src={{ get_url(path="images/logo_EpicStore.svg" ) }} style="width:18px;background-color:#565654;" alt="Epic Games Store logo" />
+      </a></li>
+      {%- endif -%}
       {%- if config.extra.social.itch -%}
       <li><a href="https://{{ config.extra.social.itch }}.itch.io" aria-label="Go to Itch.io profile page"><i class="fab fa-itch-io"></i></a></li>
+      {%- endif -%}
+      {%- if config.extra.social.sketchfab -%}
+      <li><a href="https://sketchfab.com/{{ config.extra.social.sketchfab }}" aria-label="Go to Sketchfab profile page">
+        <img src={{ get_url(path="images/logo_Sketchfab.svg" ) }} style="width:14px;" alt="Sketchfab logo" />
+      </a></li>
       {%- endif -%}
       {%- if config.extra.social.patreon -%}
       <li><a href="https://patreon.com/{{ config.extra.social.patreon }}" aria-label="Go to Patreon profile page"><i class="fa-brands fa-patreon"></i></a></li>
