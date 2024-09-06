@@ -69,12 +69,17 @@
         <img src={{ get_url(path="images/logo_EpicStore.svg" ) }} style="width:18px;background-color:#565654;" alt="Epic Games Store logo" />
       </a></li>
       {%- endif -%}
-      {%- if config.extra.social.itch -%}
-      <li><a href="https://{{ config.extra.social.itch }}.itch.io" aria-label="Go to Itch.io profile page"><i class="fab fa-itch-io"></i></a></li>
-      {%- endif -%}
       {%- if config.extra.social.sketchfab -%}
       <li><a href="https://sketchfab.com/{{ config.extra.social.sketchfab }}" aria-label="Go to Sketchfab profile page">
         <img src={{ get_url(path="images/logo_Sketchfab.svg" ) }} style="width:14px;" alt="Sketchfab logo" />
+      </a></li>
+      {%- endif -%}
+      {%- if config.extra.social.itch -%}
+      <li><a href="https://{{ config.extra.social.itch }}.itch.io" aria-label="Go to Itch.io profile page"><i class="fab fa-itch-io"></i></a></li>
+      {%- endif -%}
+      {%- if config.extra.social.gumroad -%}
+      <li><a href="https://{{ config.extra.social.gumroad }}.gumroad.com" aria-label="Go to Gumroad profile page">
+        <img src={{ get_url(path="images/logo_Gumroad.webp" ) }} style="width:14px;filter: grayscale(100%) brightness(150%);" alt="Gumroad logo" />
       </a></li>
       {%- endif -%}
       {%- if config.extra.social.patreon -%}
