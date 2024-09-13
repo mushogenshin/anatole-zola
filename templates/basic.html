@@ -128,6 +128,9 @@
         {%- if config.extra.show.rigging -%}
         <li><a {% if language_site_path is starting_with("/rigging") %}class="current" {% endif %} href="{{ get_url(path="@/rigging/_index.md", lang=lang) }}">{{ trans(key="rigging", lang=lang) }}</a></li>
         {%- endif -%}
+        {%- if config.extra.show.fossil_skater -%}
+        <li><a {% if language_site_path is starting_with("/fossil_skater") %}class="current" {% endif %} href="https://fossil-skater.mushogenshin.com">{{ trans(key="fossil_skater", lang=lang) }}</a></li>
+        {%- endif -%}
         {%- if config.extra.show.tags -%}
         <li><a {% if language_site_path is starting_with("/tags") %}class="current" {% endif %} href="{{ get_url(path="@/_index.md", lang=lang) }}tags">{{ trans(key="tags", lang=lang) }}</a></li>
         {%- endif -%}
