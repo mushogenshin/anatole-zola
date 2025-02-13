@@ -131,6 +131,9 @@
         {%- if config.extra.show.fossil_skater -%}
         <li><a {% if language_site_path is starting_with("/fossil_skater") %}class="current" {% endif %} href="https://fossil-skater.mushogenshin.com">{{ trans(key="fossil_skater", lang=lang) }}</a></li>
         {%- endif -%}
+        {%- if config.extra.show.childlike_verse -%}
+        <li><a {% if language_site_path is starting_with("/childlike_verse") %}class="current" {% endif %} href="https://childlike-verse-lang.web.app">{{ trans(key="childlike_verse", lang=lang) }}</a></li>
+        {%- endif -%}
         {%- if config.extra.show.tags -%}
         <li><a {% if language_site_path is starting_with("/tags") %}class="current" {% endif %} href="{{ get_url(path="@/_index.md", lang=lang) }}tags">{{ trans(key="tags", lang=lang) }}</a></li>
         {%- endif -%}
